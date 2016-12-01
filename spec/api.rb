@@ -10,6 +10,6 @@ random = 1+ rand(40)
 
 description = result["results"][random]["description"]
 
-binding.pry
+# binding.pry
 
 p result 

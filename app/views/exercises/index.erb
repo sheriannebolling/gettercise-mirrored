@@ -1,1 +1,15 @@
 <h1>Welcome to Get Fit!</h1>
+
+<%if logged_in? %>
+  <% if @exercises %>
+    <h2>List of exercises:</h2>
+    <ul>
+    <% @exercises.each do |exercise| %>
+      <li><%=exercise.description%></li>
+    <% end %>
+    </ul>
+  <% end %>
+<%else%>
+  <h2>Please login to get started</h2>
+<% end %>
+

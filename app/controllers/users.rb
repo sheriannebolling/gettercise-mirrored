@@ -12,3 +12,9 @@ post '/users' do
     erb :'users/new'
   end
 end
+
+get '/users/:id' do
+  @user = User.find_by(id: params[:id])
+  @exercises = @user.exercises.all 
+  erb :'/users/show'
+end
