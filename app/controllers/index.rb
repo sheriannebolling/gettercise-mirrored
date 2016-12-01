@@ -1,3 +1,3 @@
 get '/' do
-  redirect '/index'
+  redirect '/exercises/index'
 end

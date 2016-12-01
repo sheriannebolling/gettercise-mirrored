@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="opener">Already have an account?</h1>
+  <p>Log in here:</p>
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+    <form action="/sessions" method="post"> 
+      <input type="text" name="email" placeholder="Email"></br>
+      </br>
+      <input type="password" name="password" placeholder="Password"></br>
+      </br>
+    <input type="submit" name="Login">
+  </form>
+</div>
