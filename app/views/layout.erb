@@ -28,7 +28,7 @@
 <nav>
   <ul id="nav-mobile" class="right hide-on-med-and-down">  
     <% if logged_in? %>
-      <li class="pipe-separate"><a href="users/<%=current_user.id%>"><%=current_user.username%></a></li>
+      <li class="pipe-separate"><a href="/users/<%=current_user.id%>"><%=current_user.username%></a></li>
       <li class="pipe-separate"><a href="/">home</a></li>
       <li class="pipe-separate"><a href="/sessions">logout</a></li>
     <% else %>
