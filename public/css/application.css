@@ -1,9 +1,10 @@
+
 body {
   background-color: #C5D6D8;
   font-family: "Arial Black", Gadget, sans-serif;
 }
 
-div {
+.main {
      margin: auto;
     width: 50%;
     border: 3px solid green;
@@ -12,6 +13,11 @@ div {
     text-align: center;
 }
 
+#pipe-photo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em
+}
 
 
 .pipe-separate {
@@ -30,4 +36,9 @@ div {
   padding-right: 0;
   border-right: none;
 }
+
+.left-list {
+  text-align: left;
+}
+
 

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- 
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -19,7 +26,7 @@
 </head>
 <body>
 <nav>
-  <ul>  
+  <ul id="nav-mobile" class="right hide-on-med-and-down">  
     <% if logged_in? %>
       <li class="pipe-separate"><a href="users/<%=current_user.id%>"><%=current_user.username%></a></li>
       <li class="pipe-separate"><a href="/">home</a></li>
