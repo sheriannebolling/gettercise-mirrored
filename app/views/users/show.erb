@@ -1,6 +1,7 @@
+<div class="main">
 <h1>Welcome <%=@user.username%>!</h1>
 
-<% if @exercises %>
+<% if @user.exercises %>
   <h2>This is a list of all your exercises:</h2>
     <ul>
     <% @exercises.each do |exercise| %>
@@ -10,3 +11,9 @@
 <% else %>
   <h2>You have not done any exercises yet! Let's get started!</h2>
 <% end %>
+
+<h2>Click here to get a new exercise:</h2>
+<form action="/exercises/new" method="post"> 
+  <input type="submit" name="submit" value="Get Exercise">
+</form>
+</div>
