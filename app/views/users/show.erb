@@ -1,11 +1,13 @@
+
+        
 <div class="main">
 <h1>Welcome <%=@user.username%>!</h1>
 
 <% if @user.exercises %>
   <h2>This is a list of all your exercises:</h2>
     <ul>
-    <% @exercises.each do |exercise| %>
-      <li><%=exercise.description%></li>
+    <% @user.exercises.each do |exercise| %>
+      <li class="exercise-list"><%=exercise.description%></li>
     <% end %>
     </ul>
 <% else %>
@@ -13,7 +15,11 @@
 <% end %>
 
 <h2>Click here to get a new exercise:</h2>
-<form action="/exercises/new" method="post"> 
+<form id="exercise-button" action="/exercises/new" method="post"> 
   <input type="submit" name="submit" value="Get Exercise">
 </form>
 </div>
+
+<!-- <section id="pipe-photo">
+<img src="http://media-cache-ak0.pinimg.com/736x/49/9e/bb/499ebbf0a85578bda6646b9a75e36c30.jpg" height="300" width="400">
+</section> -->
