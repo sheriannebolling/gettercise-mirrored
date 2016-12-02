@@ -8,12 +8,9 @@ get '/exercises' do
 end
 
 post '/exercises/new' do
-
   @user = current_user
   query = `curl http://wger.de/api/v2/exercise/?language=2`
-  # binding.pry
   result = JSON.parse(query)
-
   random = 1+ rand(10)
   description = result["results"][random]["description"]
   final_description = {description: description, date: DateTime.now}
